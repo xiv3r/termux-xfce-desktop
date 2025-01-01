@@ -4,16 +4,19 @@ termux-setup-storage
 #
 pkg install neofetch root-repo x11-repo xfce* libxfce* mousepad tigervnc -y
 #
+echo "(vnc-start) &" >> $PREFIX/etc/bash.bashrc
 echo "vncserver -geometry 1600x900 -name remote-desktop :1" > $PREFIX/bin/vnc-start
 echo "vncserver -kill :1" > $PREFIX/bin/vnc-stop
+chmod 700 $PREFIX/bin/vnc-*
 #
-mkdir ~/.vnc
-echo "#!/bin/bash
+mkdir -p ~/.vnc
+echo "
+#!/bin/bash
 xrdb $HOME/.Xresources
-startxfce4" > ~/.vnc/xstartup
+startxfce4
+" > ~/.vnc/xstartup
 #
 chmod +x ~/.vnc/xstartup
-chmod +x $PREFIX/bin/vnc*
   clear
   echo " "
   echo "VNC Server address 127.0.0.1:5901"
