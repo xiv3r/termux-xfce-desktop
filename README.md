@@ -16,3 +16,16 @@ Download
 ```
 apt update && apt upgrade -y && apt install wget && wget -qO- https://raw.githubusercontent.com/xiv3r/termux-xfce-desktop/refs/heads/main/install | bash
 ```
+# Manual
+> start vnc service
+```
+vnc-start
+```
+> stop vnc service
+```
+vnc-stop
+```
+# VNC server address
+```
+127.0.0.1:5901
+```
