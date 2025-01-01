@@ -26,6 +26,7 @@ vnc-start
 vnc-stop
 ```
 # VNC server address
+> Open vnc app and place the vnc server address 
 ```
 127.0.0.1:1
 ```
