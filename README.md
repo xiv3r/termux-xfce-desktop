@@ -27,5 +27,5 @@ vnc-stop
 ```
 # VNC server address
 ```
-127.0.0.1:5901
+127.0.0.1:1
 ```
